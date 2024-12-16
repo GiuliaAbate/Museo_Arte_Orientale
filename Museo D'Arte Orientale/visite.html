@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Museo D'Arte Orientale </title>
+    <meta name="keywords" content="Museo, arte, opere, orientale" />
+    <meta name="description" content="museo d'arte orientale" />
+    <meta name="author" content="Giulia Abate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html" id="titolo">
+                Museo D'Arte Orientale
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="opere_mostre.html">Opere e mostre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="biglietteria.html">Biglietti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="storia.html">Storia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visite.html">Prenotazioni e visite guidate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid px-5 my-5">
+        <div class="row content">
+            <div class="col-sm-9 sidenav">
+            <h2>Ingressi individuali</h2>
+                <p>Per l'accesso al Museo non occorre prenotazione e si appllicano le tariffe individuali con numerose riduzioni e gratuità. I biglietti sono acquistabili anche on line.</p>
+            <h2>Gruppi e scuole</h2>
+                <p>Di seguito elencate sono presenti ulteriori informazioni per le visite guidate aperte ai gruppi e le scuole. Per visualizzarle clicca sul pulsante.</p>
+                <button class="button2">Mostra</button>  <!-- Si mostrano dei div con effetto JQuery-->
+                <br><br>
+                
+                <div id="div1">
+                <h3 class="visite"><strong>Ingresso gruppi e scuole</strong></h3>
+                    <p>La prenotazione è obbligatoria. <br>
+                    Costo del diritto di prenotazione euro 6,00 a gruppo/classe, sia per la visita autonoma, sia per la visita guidata. <br>
+                    I gruppi di almeno 20 persone hanno diritto all'ingresso ridotto. Per le scuole, l'ingresso alle collezioni permanenti è gratuito. Per le mostre temporanee, le tariffe possono variare.</p>
+                </div>
+                <div id="div2">
+                <h3 class="visite"><strong>Visite guidate per gruppi</strong></h3>
+                    <p>È possibile richiedere una visita guidata in italiano e in lingua straniera. <br>
+                    Costo: italiano 1 ora € 75, 90 minuti € 90, 2 ore € 110; visite in lingua straniera 1 ora € 80, 90 minuti € 95, 2 ore € 115</p>
+                </div>
+                <div id="div3">
+                <h3 class="visite"><strong>Visite guidate per le scuole</strong> </h3>
+                    <p>Alle scuole di ogni ordine e grado è rivolto un servizio di visite guidate a cura di personale altamente qualificato. <br>
+                    Le visite guidate permettono agli alunni di realizzare un viaggio in Oriente attraverso cinque gallerie dedicate all’Asia Meridionale e al Sud est asiatico, alla Cina e al Giappone, alla Regione Himalayana e ai Paesi Islamici dell’Asia. <br>
+                    Gli insegnanti possono organizzare la propria visita al museo, in italiano e in lingua scegliendo attraverso le seguenti tempistiche e tariffe. Il nostro staff è disponibile a studiare percorsi su misura che permettano di integrare e approfondire argomenti sviluppati in classe. <br>
+                    Costo per le scuole: italiano e lingua straniera 1 ora € 75, 90 minuti € 90, 2 ore € 110 </p>
+                </div>
+                <div id="div4">
+                <h3 class="visite"><strong>Attività di visite e laboratorio per le scuole</strong></h3>
+                    <p>Per le scuole è possibile svolgere attività di visita e laboratorio. <br>
+                        Costo: € 75 a classe, durata 90 minuti </p>
+                </div>
+            </div>
+            
+
+            <div class="col-sm-3 sidenav">
+                <h3> Prenota la tua visita </h3>
+                <form id="prenotazione"> <!-- Form validato con JQuery -->
+                    <fieldset>
+                        <legend>Inserisci i dati</legend>
+                            <label for="nome"><strong>Nome</strong></label>:
+                            <input id="nome" type="text" name="nome" size="20" maxlength="20">
+                            <p id="nome_errore"></p>
+                            <br>
+                    
+                            <label for="cognome"><strong>Cognome</strong></label>:
+                            <input id="cognome" type="text" name="cognome" size="20" maxlength="20">
+                            <p id="cognome_errore"></p>
+                            <br>
+                    
+                            <label for="dataVisita"><strong>Data della visita</strong></label>:
+                            <input id="dataVisita" type="date"  name="data_visita">
+                            <p id="dataVisita_errore"></p>
+                            <br>
+
+                            <label for="oraPreferita"><strong>Ora preferita</strong></label>:
+                            <input id="oraPreferita" type="time" name="ora_preferita">
+                            <p id="oraPreferita_errore"></p>
+                            <br>
+
+                            <label for="tipoVisita"><strong>Tipo di ingresso o visita</strong></label>:
+                            <select id="tipoVisita" name="tipo_visita" required>
+                            <option value="ingresso">Ingresso per gruppi o scuole</option>
+                            <option value="gruppi">Visite guidate per gruppi</option>
+                            <option value="scuole">Visite guidate per scuole</option>
+                            <option value="attivita">Attività di visite e laboratorio per scuole</option>
+                            </select>
+                            <br><br>
+                            
+                            <label for="numeroPartecipanti"><strong>Numero di partecipanti</strong></label>:
+                            <input id="numeroPartecipanti" type="number" name="numero_partecipanti">
+                            <p id="numeroPartecipanti_errore"></p>
+                            <br>
+
+                            <label for="linguaPreferita"><strong>Lingua preferita</strong></label>:
+                            <input id="linguaPreferita" type="text" name="lingua_preferita">
+                            <p id="linguaPreferita_errore"></p>
+                            <br>
+
+                            <label for="esigenge_speciali"><strong>Esigenze speciali</strong></label>:
+                            <textarea id="esigenge_speciali" name="esigenge_speciali" maxlength="300"></textarea> <!-- Evento JQuery che mostra caratteri mancanti -->
+                            <span id="caratteri">300</span>  Caratteri rimanenti
+                            <br><br>
+                            
+                            <label>
+                                <input type="checkbox" name="consenso"  required>
+                                Acconsento a ricevere comunicazioni relative al museo.
+                            </label>
+
+                            <br><br>
+                            <label for="submit" hidden>Prenota visita</label>
+                            <input id="submit" type="submit" name="submit" value="Prenota" class="button">
+                            <label for="reset" hidden>Annulla</label>
+                            <input id="reset" type="reset" name="reset" value="Annulla" class="button">
+                    </fieldset>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="crediti">© 2023 Museo D'Arte Orientale</p>
+    </footer>
+</body>
+</html>

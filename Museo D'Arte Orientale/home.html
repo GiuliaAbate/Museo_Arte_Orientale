@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Museo D'Arte Orientale </title>
+    <meta name="keywords" content="Museo, arte, opere, orientale" />
+    <meta name="description" content="museo d'arte orientale" />
+    <meta name="author" content="Giulia Abate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-app="myApp" > <!-- ng-app definisce appicazione AngularJS -->
+    <nav class="navbar navbar-expand-lg"> <!-- Barra di navigazione utilizzando bootstrap, si adatta in base alle dimensioni medie/grandi dei dispositivi -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html" id="titolo">
+                Museo D'Arte Orientale
+            </a>
+            <!-- Pulsante per i dispositivi più piccoli che mostra le pagine del menu -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="opere_mostre.html">Opere e mostre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="biglietteria.html">Biglietti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="storia.html">Storia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visite.html">Prenotazioni e visite guidate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2> Iscriviti alla nostra newsletter </h2>
+                    <!-- Validazione del form -->
+                    <form ng-controller="validateCtrl" name="myForm" ng-submit="invio()" novalidate>  <!-- Si crea controller AngularJs con ng-controller. Con ng-submit si invia il form chiamando la funzione definita -->
+                        <fieldset>
+                            <legend>Inserisci i tuoi dati</legend>
+                                <label for="nome"><strong>Il tuo nome</strong></label>:
+                                <input id="nome" type="text" name="nome" ng-model="nome" size="20" maxlength="20" required> <!--ng-model collega il valore degli input al variabile nel controller -->
+                                    <!-- Si crea un messaggio di errore quando il campo viene modificato oppure non è valido -->
+                                    <span style="color:red" ng-show="myForm.nome.$dirty && myForm.nome.$invalid">
+                                    <br>
+                                    <span ng-show="myForm.nome.$error.required">Il nome è obbligatorio.</span> <!-- Messaggio che mostra dicendo che il campo è obbligatorio -->
+                                    </span>
+                                <br><br>
+
+                                <label for="cognome"><strong>Il tuo cognome</strong></label>:
+                                <input id="cognome" type="text" name="cognome" ng-model="cognome" size="20" maxlength="20" required>
+                                    <span style="color:red" ng-show="myForm.cognome.$dirty && myForm.cognome.$invalid">
+                                    <br>
+                                    <span ng-show="myForm.cognome.$error.required">Il cognome è obbligatorio.</span>
+                                    </span>
+                                <br><br>
+
+                                <label for="email"><strong>La tua email</strong></label>:
+                                <input id="email" type="email"  name="email" ng-model="email" required>
+                                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                                    <br>
+                                    <span ng-show="myForm.email.$error.required">L'email è obbligatoria.</span>
+                                    <span ng-show="myForm.email.$error.email">L'email è invalida.</span>
+                                    </span>
+                                <br><br>
+
+                                <em>Nome completo: </em> {{nome + " " + cognome}} <!-- Mostra le variabili inserite nei campi -->
+                                <br>
+                                <em>Email: </em> {{email}}
+                                <br><br>
+                                <p id="successo">{{testo}}</p>
+                                <br>
+
+                                <label for="submit" hidden>Invia</label>
+                                <!-- Il pulsante per inviare il form non permette l'invio se i campi non sono compilati nel modo giusto -->
+                                <input id="submit" type="submit" name="submit" class="button" value="Invia"  ng-disabled="myForm.$pristine || (myForm.nome.$dirty && myForm.nome.$invalid) ||
+                                (myForm.cognome.$dirty && myForm.cognome.$invalid) || (myForm.email.$dirty && myForm.email.$invalid)">
+                        </fieldset>
+                    </form>
+                <hr>
+                <h3>Come raggiungerci</h3>
+                    <p id="via">Via San Domenico, 11 <br> 10122 Torino <br> Italia </p>
+                    <p id="tragitto">Dalle Stazioni ferroviare ci potete raggiungere: <br>
+                        <strong>A PIEDI:</strong> attraversando il centro cittadino, Porta Nuova dista circa 1.8km e Porta Susa circa 1.3km <br>
+                        <strong>IN AUTOBUS:</strong> da porta Susa il bus Star due; da porta Nuova bus n.52 e n.11, tram n.4 <br>
+                        <strong>IN AUTO: </strong> è importante prestare attenzione a restrizione e divieti che regolano le aree adiacenti al Museo. Per avere maggiori indicazioni consultare il sito del Comune di Torino.<br>
+                        I parcheggi vicino al Museo sono tutti a pagamento: strisce blu nella zona ztl oppure parcheggi sotterranei in Piazza Castello, Piazza Emanuele Filiberto, Santo Stefano presso le Porte Palatine o a barriera in Piazza Albarello.
+                    </p>
+            </div>
+          
+            <div class="col-sm-8 px-5">
+                <div id="news">
+                    <div ng-controller="newCtrl"> <!-- Collegato al servizio che mostra un banner in cui si mostra un secondo messaggio dopo qualche secondo-->
+                        <h3><strong>{{novita}}</strong></h3>
+                    </div>
+                </div>
+
+                <br>
+                <h2> Il nostro museo </h2>
+                <p id="introduzione"> Inaugurato nel 2008 nella sede storica di Palazzo Mazzonis, il Museo d'Arte Orientale custodisce una delle più importanti collezioni di arte asiatica in Italia e in Europa.
+                <br/> Il nostro museo non è solo il luogo in cui le collezioni vengono presentate al pubblico. Si tratta di uno spazio sperimentale per l’attivazione delle collezioni stesse attraverso progetti espositivi e performativi, ed è un occasione  di creazione e di espansione di contenuti e ricerca.
+                </p>
+                <p>Clicca <a href="" onclick="apriFAQ()">QUI</a> per leggere le domande più frequenti</p>
+                
+                <h3> Orari di apertura </h3>
+                    <p> Il nostro museo è aperto dal martedì alla domenica. In caso di eventi straordinari e festività gli orari possono variare. </p>
+                    <p><strong>ATTENZIONE:</strong> la biglietteria chiude un'ora prima dell'orario di chiusura, sia per l'emissione dei biglietti sul posto che per la conversione dei biglietti acquistati online.</p>
+                <!-- Filtro che ordina gli orari di apertura -->
+                <div ng-controller="orariCtrl">
+                    <table class="table table-striped table-bordered table-sm w-30">
+                        <tr>
+                            <th>Giorno</th>
+                            <th ng-click="orderByOrario()">Orario</th>
+                        </tr>
+                
+                        <tr ng-repeat="x in orari | orderBy: myOrderBy">
+                            <td ng-bind="x.giorno"></td>
+                            <td ng-bind="x.orario"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                </div>
+        </div>
+    </div>
+
+    <footer>
+    <p id="crediti">© 2024 Museo D'Arte Orientale </p>
+    </footer>
+</body>
+</html>
+

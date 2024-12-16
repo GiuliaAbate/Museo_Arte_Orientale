@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Museo D'Arte Orientale </title>
+    <meta name="keywords" content="Museo, arte, opere, orientale" />
+    <meta name="description" content="museo d'arte orientale" />
+    <meta name="author" content="Giulia Abate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-app="myApp" >
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html" id="titolo">
+                Museo D'Arte Orientale
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="opere_mostre.html">Opere e mostre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="biglietteria.html">Biglietti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="storia.html">Storia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visite.html">Prenotazioni e visite guidate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carosello" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="10" aria-label="Slide 11"></button>
+            <button type="button" data-bs-target="#carosello" data-bs-slide-to="11" aria-label="Slide 12"></button>
+        </div>
+
+        <div class="carousel-inner"> <!-- Carosello delle mostre utilizzando Bootstrap -->
+            <div class="carousel-item active">
+                <img src="immagini/giappone.jpg" class="d-block w-100" alt="giappone">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Contemporary Monogatari: nuove narrazioni giapponesi</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/chen.jpg" class="d-block w-100" alt="animo_chen">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Animo Chen | Una breve elegia</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/declinazioni.jpg" class="d-block w-100" alt="declinazioni_contemporanee">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Declinazioni contemporanee</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/profumi.jpg" class="d-block w-100" alt="profumi_fiori">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>PROFUMI - FIORI - Fiori dipinti, incisi, intessuti</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/profumi2.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>PROFUMI - LEGNO - Sotto l'oro, il cipresso</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/cina.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Arte e tè in Oriente</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/profumi3.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>PROFUMI - ORIENTE - Le spezie, l'incenso e altre strade</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/visual.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Visual Vernacular</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/eurasia.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Trad u/i zioni d'Eurasia</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/soundscapes.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Evolving soundscapes</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/sherpa.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tsherin Sherpa</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="immagini/india.jpg" class="d-block w-100" alt="profumi_legno">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Il sole, il sesamo e gli aquiloni. La festa indiana di Makar Sankranti</h5>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carosello" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Precedente</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carosello" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Successivo</span>
+        </button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-6 px-4 my-5">
+                <!--Controller che permette di mostrare le mostre disponibili in base a quello che si scrive -->
+                <div ng-controller="mostreCtrl">
+                    <p>Inserisci una lettera, la lista che comprende le mostre si aggiornerà in base alla lettera inserita</p>
+                    <p> <input id="inserire" type="text" ng-model="test"></p> <!-- il modello collega il valore scritto alla variabile usata per filtrare -->
+                    <ul>
+                        <li ng-repeat="x in mostre | filter:test"> <!-- itera nell'array delle mostre e filtra -->
+                            {{x}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 px-4 my-5">
+            <div ng-controller="opereCtrl">
+            <p>Clicca sul pulsante per sapere di più sulle opere sottostanti</p>
+                <button ng-click="visualizza()">Scopri di più</button> <!-- evento che mostra dei div cliccando sul pulsante -->
+                <br><br>
+                
+                <img src="immagini/opera1.jpg" alt="girale di pipal" title="girale di pipal" class="opere">
+                <div ng-show="mostra">
+                    <p>Fregio ornamentale a Butkara I presenta un girale di rami e foglie di pipal, 
+                        incorniciato da foglie diritte e punte di dardi nella parte superiore. Sovrapposto ai rilievi figurativi, simbolizza l'importanza dell'albero sacro nel contesto buddhista.</p>
+                </div>
+                <br> 
+
+                <img src="immagini/opera2.jpg" alt="Boccale dipinto a lustro" title="Boccale dipinto a lustro" class="opere">
+                <div ng-show="mostra">
+                    <p>Collo alto cilindrico, manico saldato al collo e alla spalla, piede cilindrico leggermente svasato. 
+                        Decorato in lustro bruno con disegni figurativi e motivi floreali geometrizzati: sul grande collo questi motivi sono racchiusi in esagoni allungati, alternativamente disposti verticalmente e orizzontalmente.</p>
+                </div>
+                <br> 
+
+                <img src="immagini/opera3.jpg" alt="Piatto con motivo a nuvole" title="Piatto con motivo a nuvole" class="opere">
+                <div ng-show="mostra">
+                    <p>Il piatto presenta un'elegante decorazione di nuvole cinesi dipinte in blu cobalto e turchese su una superficie bianca senza altri ornamenti. 
+                        Il piatto subì con ogni probabilità una deformazione durante la cottura: questa è la causa della lunga crepa visibile sulla superficie.  
+                    </p>
+                </div>
+                <br> 
+
+                <img src="immagini/opera4.jpg" alt="Inro a cinque compartimenti" title="Inro a cinque compartimenti" class="opere">
+                <div ng-show="mostra">
+                    <p>Inrō composto da cinque compartimenti a sezione ellissoidale schiacciata, con coperchio e fondo piatti. Rivestito esternamente di lacca marrone lucida non uniforme. 
+                        La decorazione principale, analoga sulle due facce maggiori, consta di schematiche farfalle che svolazzano sopra a lunghi fili d’erba: le une e gli altri sono realizzate con intarsio di madreperla. L’interno degli scomparti è laccato con nashiji tendente all’arancio.</p>
+                </div>
+                <br> 
+
+                <img src="immagini/opera5.jpg" alt="Inro a quattro compartimenti" title="Inro a quattro compartimenti" class="opere">
+                <div ng-show="mostra">
+                    <p>Inrō composto da quattro compartimenti impilati a sezione ellissoidale schiacciata, con coperchio e fondo bombati. 
+                        Il contorno risultante è un rettangolo dagli angoli fortemente smussati e dai lati convessi: il carattere curvilineo del contorno è accentuato da una banda liscia in rilievo che gira tutto attorno all’oggetto.</p>
+                </div>
+                <br> 
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <p id="crediti">© 2023 Museo D'Arte Orientale</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Museo D'Arte Orientale </title>
+    <meta name="keywords" content="Museo, arte, opere, orientale" />
+    <meta name="description" content="museo d'arte orientale" />
+    <meta name="author" content="Giulia Abate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html" id="titolo">
+                Museo D'Arte Orientale
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="opere_mostre.html">Opere e mostre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="biglietteria.html">Biglietti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="storia.html">Storia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visite.html">Prenotazioni e visite guidate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-8 px-5 my-5">
+            <h2>La storia del museo</h2>
+                <p>Da residenza della nobiltà sabauda in epoca barocca a sede degli uffici di una manifattura tessile alla fine dell'Ottocento, da luogo testimone degli Anni di Piombo alla fine del secolo scorso a porta sull'Oriente dal 2008, l'edificio che ospita il museo ha vissuto e riflesso come un microcosmo i grandi cambiamenti che hanno coinvolto la città e il territorio.</p>
+
+            <h3>Il palazzo</h3>
+                <p>Il palazzo fu per almeno tre secoli la dimora torinese di due rami di una famiglia tra le più importanti dell'aristocrazia piemontese: i Solaro della Chiusa (derivati dai Solaro di Moretta) e i Solaro della Margarita. I Solaro appartenevano originariamente a quel patriziato astigiano che, investendo i proventi di un’attività mercantile di respiro europeo e di prestito di denaro, dal XIII secolo in poi aveva acquisito diritti signorili e successivamente si era integrato nell’amministrazione e nel sistema degli onori dello Stato sabaudo.
+                    <br>
+                    L'edificio è attestato fin dal 1587 e le sue sorti sono strettamente legate alla storia dei suoi proprietari, in parte ripercorribile grazie alle decorazioni in stucco del salone di rappresentanza collocato al piano nobile dell'edificio.
+                    <br><br>
+                    Gli interventi più recenti nell’ornato del palazzo interessano lo scalone d’onore e si devono all’iniziativa di Ottavio Mazzonis. Lo stesso Ottavio Mazzonis, pittore allievo di Nicola Arduino, nel 1955 dipinse la volta ad affresco con l’allegoria dell’Arte e dell’Industria e le insegne araldiche della famiglia, e due anni dopo eseguì sulla parete Est, a olio, Il giudizio di Paride.
+                    <br>
+                    Tra il 2004 e il 2008 il palazzo vede la sua ultima grande trasformazione d’uso. Le sue porte si riaprono nel dicembre 2008, quando, tra gli stucchi barocchi e i muri pregni di storia recente, trovano posto per la prima volta le collezioni del Museo d’Arte Orientale.
+                    <br><br>
+                    Il progetto di restauro dell’edificio è stato redatto dal settore Edifici per la Cultura della Città di Torino, su linee guida degli architetti Durbiano, Isola e Reinerio incaricati da Compagnia San Paolo.
+                    <br>
+                    Nella corte interna è stato realizzato ex-novo un padiglione vetrato che ospita un giardino secco e un giardino umido, di ispirazione giapponese.
+                </p>
+            
+            <h3>Le Gallerie</h3>
+                <p>Le collezioni del nostro museo consistono di quasi 2300 opere ed essere coprono un arco temporale che parte dal Neolitico e arriva fino agli inizio del secolo scorso.
+                    A questo si aggiungono più di 1400 reperti di scavo di periodo pre-islamico che provengono dagli scavi iracheni di Seleucia e Coche.
+                    <br>
+                    Le sale destinate all'esposizione permanente sono distribuite in cinque distinte gallerie che corrispondono ad altrettante aree culturali: l'Asia Meridionale, il Sud est asiatico, la Cina, la Regione Himalayana, il Giappone e i Paesi Islamici.
+                </p>
+            </div>
+
+            <div class="col-sm-3">
+                <img src="immagini/home.jpg" alt="interno del museo" title="interno" id="interno">
+                <img src="immagini/mazzonis.jpg" onmouseover="cambiaImg()" onmouseout="ripristinaImg()" alt="interno del palazzo mazzonis, il palazzo del museo" title="interno palazzo mazzonis" id="palazzo_interno"> <!-- evento javascript -->
+                <img src="immagini/giardino.jpg" alt="giardino giapponese che si trova all'interno del museo" title="giardino giapponese" id="giardino">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <p id="crediti">© 2023 Museo D'Arte Orientale</p>
+    </footer>
+</body>
+</html>
